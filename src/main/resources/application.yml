@@ -1,0 +1,24 @@
+server: 
+    # 服务端口
+    port: 9002
+
+spring:
+    # 服务名称
+    application:
+        name: RestTemplateServerDemo
+    jackson:
+        # json中日期是否用timestamps格式交互
+        serialization.write-dates-as-timestamps: true
+        # json中遇到无效变量是否报错
+        deserialization.FAIL_ON_UNKNOWN_PROPERTIES: off
+    # 国际化
+    messages: 
+        basename: i18n/messages
+
+
+# LOG相关设置
+logging:
+  path: /var/log/RestTemplateClientDemo
+  level:
+    com.edudigital.demo: TRACE
+    org.springframework: WARN
