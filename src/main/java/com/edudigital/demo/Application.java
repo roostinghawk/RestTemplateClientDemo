@@ -20,8 +20,6 @@ import java.util.HashMap;
 @SpringBootApplication
 public class Application {
 
-    private static String url = "http://127.0.0.1:9001/transactions";
-
     public static void main(String[] args){
 
         final HashMap<String, Object> props = new HashMap<>(16);
@@ -32,9 +30,6 @@ public class Application {
 
 
         RestTemplateService restTemplateService = new RestTemplateServiceImpl();
-
-        System.out.println("Test Get");
-        Object object = restTemplateService.exchange(url, HttpMethod.GET, new Object(), Object.class);
 
     }
 
